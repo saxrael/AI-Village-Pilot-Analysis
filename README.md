@@ -58,7 +58,3 @@ Add `--local-dir` to any script to read a downloaded copy of the tables instead 
 ## Data
 
 AI Digest, AI Village dataset (`aidigestorg/ai-village`), used under its terms: research use only, no re-identification. The dataset is gated and cannot be redistributed, so this repo holds code and summary tables only, with no message text or screenshots. If you use results from here, please cite AI Digest and the AI Village project.
-
-## Authorship
-
-I wrote this code with Claude, and directed and ran the analysis myself. Israel Ayeni.
