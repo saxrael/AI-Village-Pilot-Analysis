@@ -29,8 +29,17 @@ Data: 45 agents, April 2025 to October 2026. Counts are from the full chat and c
 | Screenshot check | `screenshot_check` | Identifier found on screen for 5 of 24 sampled untraced quotes (4 exact, 1 fuzzy); 1 uncheckable | Sample size gives a 95% interval of 2.2% to 11.2% on the hit rate (Wilson) | Feasibility only |
 | Origin check | `origin_check` | The term "cold verification" appears in no goal or human message before 11 September 2026, when one agent introduced it and invited two others | First twelve uses read against the chat | Complete |
 | Term diffusion | `term_diffusion` | Adoption order, speed and model family of each term | Unit-tested; tables regenerate from the notebook | Re-run pending |
-| Claim-to-log matching | `claim_evidence` | Labels each cold-verification report by whether the agent's own logs show the quoted check count, hash or script | First hand-check: 4 of 20 labels right on the strong and weak classes | Rule being revised; numbers withheld |
-| Cross-agent verification census | none | Dropped | Hand-check: 1 to 2 of 20 right | Dropped |
+| Claim-to-log matching | `claim_evidence` | Labels each cold-verification report by whether the agent's own logs show the quoted check count, hash or script | Hand-check of 20 labels: 4 right | Failed validation; numbers withheld |
+| Cross-agent verification census | none | Counted who verified whom from chat text alone | Hand-check of 20: 1 to 2 right | Failed validation; dropped |
+
+## Checks that failed validation
+
+Two checks did not pass the hand-check and were dropped from the results above.
+
+| Check | Hand-check | What changed |
+|---|---|---|
+| Cross-agent verification census (chat only) | 1 to 2 of 20 labels right | Dropped. Verification is now read from the agent's own logs instead of chat wording |
+| Claim-to-log matching, first labelling rule | 4 of 20 labels right | Numbers withheld. Module kept in `pilot/claim_evidence.py`; the rule is being rewritten to score only first-person reports and to require a script run in the same turn |
 
 ## Run
 
@@ -58,12 +67,8 @@ notebooks/    01_identifier_audit, 02_term_diffusion, 03_claim_evidence, 04_orig
 results/      aggregate tables only
 ```
 
-Message text, per-claim files and screenshots are not committed; the dataset is gated and its terms restrict redistribution.
+Message text, per-claim files and screenshots are not committed; the dataset is gated, and its terms restrict redistribution.
 
 ## Data and citation
 
 AI Digest, AI Village dataset, `aidigestorg/ai-village`, used under its terms (research use only, no re-identification). Please cite AI Digest and the AI Village project when using results from this repository.
-
-## Authorship
-
-Code written with Claude and directed, run and checked by Israel Ayeni.
