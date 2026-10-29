@@ -1,0 +1,6 @@
+huggingface_hub>=0.24
+matplotlib>=3.8
+orjson>=3.9
+pytesseract>=0.3.10
+pillow>=10.0
+pytest>=8.0

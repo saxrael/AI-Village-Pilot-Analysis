@@ -1,0 +1,13 @@
+.env
+*.env
+__pycache__/
+.ipynb_checkpoints/
+out/
+data/
+*.jsonl
+*.jsonl.gz
+*.tar
+*.zip
+screenshots/
+hand_check_sample.csv
+claim_evidence.jsonl
